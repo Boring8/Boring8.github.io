@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Boring</title>
+  <title>搭建博客遇到的问题 | Boring</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Boring">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="搭建流程个人是根据up主CodeSheep的搭建博客视频操作【手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo】https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1Yb411a7ty?vd_source&#x3D;50be6b22e81e8bfc8a768b205904310c 个人遇到的坑域名域名的创建必须按照格式来。（XXX.github.io） 本人就是因为把格式中的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建博客遇到的问题">
+<meta property="og:url" content="http://example.com/2023/05/05/Build%20blog(pit)/index.html">
 <meta property="og:site_name" content="Boring">
+<meta property="og:description" content="搭建流程个人是根据up主CodeSheep的搭建博客视频操作【手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo】https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1Yb411a7ty?vd_source&#x3D;50be6b22e81e8bfc8a768b205904310c 个人遇到的坑域名域名的创建必须按照格式来。（XXX.github.io） 本人就是因为把格式中的">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-05T07:53:52.000Z">
+<meta property="article:modified_time" content="2023-05-05T15:36:08.285Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -128,100 +132,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-JAVA algorithm(method)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Build blog(pit)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/06/JAVA%20algorithm(method)/">JAVA算法小技巧</a>
-    </h1>
-  
-
-        
-        <a href="/2023/05/06/JAVA%20algorithm(method)/" class="archive-article-date">
-  	<time datetime="2023-05-06T07:25:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>java算法就得有别其他语言的方法，所以首先我会采用内配的的方法。</p>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>1.HashMap</p>
-<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>哈希算法实现的键值对存储结构，支持快速存储、查找和删除。个人认为这是最经常用的集合，主要是找对应的值这内配的方法可以减少运算的时间。不过也需要消耗更多的运行空间。</p>
-<h4 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h4><p>put(key, value)：将key-value对插入到哈希表中。<br>get(key)：返回与指定键关联的值，如果该键不存在，则返回null。<br>remove(key)：删除指定键对应的映射关系。<br>containsKey(key)：判断哈希表中是否包含指定的键。<br>containsValue(value)：判断哈希表中是否包含指定的值。<br>keySet()：返回哈希表中所有键的集合。<br>values()：返回哈希表中所有值的集合。<br>entrySet()：返回哈希表中所有键值对的集合。</p>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>1.两数之和<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum/">https://leetcode.cn/problems/two-sum/</a><br>2.罗马转整数<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/roman-to-integer/">https://leetcode.cn/problems/roman-to-integer/</a></p>
-<h3 id="2-ArrayList"><a href="#2-ArrayList" class="headerlink" title="2.ArrayList"></a>2.ArrayList</h3><h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><p>同LinkedList除了底层一个是链表一个是数组基本没什么不同。它们是有序有索引值，元素可重复。比较局限于排列有相同元素的集合。</p>
-<h4 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h4><p>add(element) - 将元素添加到链表尾部<br>addFirst(element) - 将元素添加到链表头部<br>addLast(element) - 将元素添加到链表尾部<br>remove() - 删除并返回链表头部的元素<br>removeFirst() - 删除并返回链表头部的元素<br>removeLast() - 删除并返回链表尾部的元素<br>get(index) - 返回指定索引处的元素<br>set(index, element) - 替换指定索引处的元素<br>size() - 返回链表中元素的数量<br>clear() - 删除链表中的所有元素</p>
-<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>1.移除元素<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-element/">https://leetcode.cn/problems/remove-element/</a></p>
-<h3 id="3-LinkedHashSet"><a href="#3-LinkedHashSet" class="headerlink" title="3.LinkedHashSet"></a>3.LinkedHashSet</h3><h4 id="介绍-2"><a href="#介绍-2" class="headerlink" title="介绍"></a>介绍</h4><p>和ArrayList的使用区别就是放入这个集合内的元素不能重复，如果想让String类型元素不重复得重写 hashCode()和 equals()。</p>
-<h4 id="常用方法-2"><a href="#常用方法-2" class="headerlink" title="常用方法"></a>常用方法</h4><p>add(E e)：向set中添加元素e，如果元素已存在，则不会添加。<br>clear()：清空set中的所有元素。<br>contains(Object o)：判断set是否包含指定对象o，如果包含则返回true，否则返回false。<br>iterator()：返回set中所有元素的迭代器。<br>remove(Object o)：从set中删除指定对象o，如果删除成功，则返回true，否则返回false。<br>size()：返回set中元素的数量。<br>toArray()：将set转换为数组。</p>
-<h4 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h4><p>1.删除有序数列的重复项<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">https://leetcode.cn/problems/remove-duplicates-from-sorted-array/</a></p>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="常用方法-3"><a href="#常用方法-3" class="headerlink" title="常用方法"></a>常用方法</h3><p>有些方法中前几个要必须会，否则题都做不了。以下是参考<a target="_blank" rel="noopener" href="http://t.csdn.cn/v6UpV">http://t.csdn.cn/v6UpV</a></p>
-<h4 id="1-charAt-int-index"><a href="#1-charAt-int-index" class="headerlink" title="1.charAt(int index)"></a>1.charAt(int index)</h4><p>返回指定索引处的值。(返回char类型)</p>
-<h4 id="2-indexOf-int-ch"><a href="#2-indexOf-int-ch" class="headerlink" title="2.indexOf(int ch)"></a>2.indexOf(int ch)</h4><p>从前向后查找指定字符第一次出现的字符串中的索引.（返回int类型）</p>
-<h4 id="3-substring-int-beginIndex"><a href="#3-substring-int-beginIndex" class="headerlink" title="3.substring(int beginIndex)"></a>3.substring(int beginIndex)</h4><p>返回一个字符串，返回从起始位置（beginIndex）至字符串末尾的字符串。（返回String类型）</p>
-<h4 id="4-substring-int-beginIndex，int-endIndex"><a href="#4-substring-int-beginIndex，int-endIndex" class="headerlink" title="4.substring(int beginIndex，int endIndex)"></a>4.substring(int beginIndex，int endIndex)</h4><p>返回从起始位置（beginIndex）到目标位置（endIndex）之间的字符串，但不包含目标位置（endIndex）的字符。（返回String类型）</p>
-<h4 id="5-startsWith-String-s-int-start"><a href="#5-startsWith-String-s-int-start" class="headerlink" title="5.startsWith(String s,int start)"></a>5.startsWith(String s,int start)</h4><p>用于检测字符串是否以指定的前缀开始。（返回boolean类型）</p>
-<h4 id="6-endsWith-String-s"><a href="#6-endsWith-String-s" class="headerlink" title="6.endsWith(String s)"></a>6.endsWith(String s)</h4><p>测试此字符串是否以指定的后缀结尾。（返回boolean类型）</p>
-<h4 id="7-trim-Striang-s"><a href="#7-trim-Striang-s" class="headerlink" title="7.trim(Striang s)"></a>7.trim(Striang s)</h4><p>用于删除字符串的头尾空白符。（返回String类型）</p>
-<h4 id="8-replace-char-searchChar-char-newChar"><a href="#8-replace-char-searchChar-char-newChar" class="headerlink" title="8.replace(char searchChar,char newChar)"></a>8.replace(char searchChar,char newChar)</h4><p>通过用 newChar 字符替换字符串中出现的所有 searchChar 字符，并返回替换后的新字符串。</p>
-<h4 id="10-toCharArray-String-s"><a href="#10-toCharArray-String-s" class="headerlink" title="10.toCharArray(String s)"></a>10.toCharArray(String s)</h4><p>将字符串转换为字符数组。(返回Char数组)</p>
-<h4 id="11-split-String-regex-int-limit"><a href="#11-split-String-regex-int-limit" class="headerlink" title="11.split(String regex,int limit)"></a>11.split(String regex,int limit)</h4><p>regex – 正则表达式分隔符。limit – 分割的份数。根据匹配给定的正则表达式来拆分字符串（返回String数组）</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/06/JAVA%20algorithm(method)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Build blog(pit)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/05/Build%20blog(pit)/">搭建博客遇到的问题</a>
+    <h1 class="article-title" itemprop="name">
+      搭建博客遇到的问题
     </h1>
   
 
@@ -247,6 +165,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -254,16 +193,79 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/05/05/Build%20blog(pit)/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/05/05/Build%20blog(pit)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2023/05/06/JAVA%20algorithm(method)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JAVA算法小技巧
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -283,8 +285,14 @@
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -307,8 +315,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
