@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>JAVA算法小技巧 | Boring</title>
+  <title>Java算法（summary） | Boring</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="java算法就得有别其他语言的方法，所以首先我会采用内配的的方法。 集合1.HashMap 介绍哈希算法实现的键值对存储结构，支持快速存储、查找和删除。个人认为这是最经常用的集合，主要是找对应的值这内配的方法可以减少运算的时间。不过也需要消耗更多的运行空间。 常用方法put(key, value)：将key-value对插入到哈希表中。get(key)：返回与指定键关联的值，如果该键不存在，则返回">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA算法小技巧">
+<meta property="og:title" content="Java算法（summary）">
 <meta property="og:url" content="http://example.com/2023/05/06/JAVA%20algorithm(method)/index.html">
 <meta property="og:site_name" content="Boring">
 <meta property="og:description" content="java算法就得有别其他语言的方法，所以首先我会采用内配的的方法。 集合1.HashMap 介绍哈希算法实现的键值对存储结构，支持快速存储、查找和删除。个人认为这是最经常用的集合，主要是找对应的值这内配的方法可以减少运算的时间。不过也需要消耗更多的运行空间。 常用方法put(key, value)：将key-value对插入到哈希表中。get(key)：返回与指定键关联的值，如果该键不存在，则返回">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-06T07:25:25.000Z">
-<meta property="article:modified_time" content="2023-05-06T09:51:13.442Z">
+<meta property="article:modified_time" content="2023-05-06T12:13:01.562Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -139,7 +139,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JAVA算法小技巧
+      Java算法（summary）
     </h1>
   
 
@@ -163,17 +163,9 @@
 <h3 id="3-LinkedHashSet"><a href="#3-LinkedHashSet" class="headerlink" title="3.LinkedHashSet"></a>3.LinkedHashSet</h3><h4 id="介绍-2"><a href="#介绍-2" class="headerlink" title="介绍"></a>介绍</h4><p>和ArrayList的使用区别就是放入这个集合内的元素不能重复，如果想让String类型元素不重复得重写 hashCode()和 equals()。</p>
 <h4 id="常用方法-2"><a href="#常用方法-2" class="headerlink" title="常用方法"></a>常用方法</h4><p>add(E e)：向set中添加元素e，如果元素已存在，则不会添加。<br>clear()：清空set中的所有元素。<br>contains(Object o)：判断set是否包含指定对象o，如果包含则返回true，否则返回false。<br>iterator()：返回set中所有元素的迭代器。<br>remove(Object o)：从set中删除指定对象o，如果删除成功，则返回true，否则返回false。<br>size()：返回set中元素的数量。<br>toArray()：将set转换为数组。</p>
 <h4 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h4><p>1.删除有序数列的重复项<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">https://leetcode.cn/problems/remove-duplicates-from-sorted-array/</a></p>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="常用方法-3"><a href="#常用方法-3" class="headerlink" title="常用方法"></a>常用方法</h3><p>有些方法中前几个要必须会，否则题都做不了。以下是参考<a target="_blank" rel="noopener" href="http://t.csdn.cn/v6UpV">http://t.csdn.cn/v6UpV</a></p>
-<h4 id="1-charAt-int-index"><a href="#1-charAt-int-index" class="headerlink" title="1.charAt(int index)"></a>1.charAt(int index)</h4><p>返回指定索引处的值。(返回char类型)</p>
-<h4 id="2-indexOf-int-ch"><a href="#2-indexOf-int-ch" class="headerlink" title="2.indexOf(int ch)"></a>2.indexOf(int ch)</h4><p>从前向后查找指定字符第一次出现的字符串中的索引.（返回int类型）</p>
-<h4 id="3-substring-int-beginIndex"><a href="#3-substring-int-beginIndex" class="headerlink" title="3.substring(int beginIndex)"></a>3.substring(int beginIndex)</h4><p>返回一个字符串，返回从起始位置（beginIndex）至字符串末尾的字符串。（返回String类型）</p>
-<h4 id="4-substring-int-beginIndex，int-endIndex"><a href="#4-substring-int-beginIndex，int-endIndex" class="headerlink" title="4.substring(int beginIndex，int endIndex)"></a>4.substring(int beginIndex，int endIndex)</h4><p>返回从起始位置（beginIndex）到目标位置（endIndex）之间的字符串，但不包含目标位置（endIndex）的字符。（返回String类型）</p>
-<h4 id="5-startsWith-String-s-int-start"><a href="#5-startsWith-String-s-int-start" class="headerlink" title="5.startsWith(String s,int start)"></a>5.startsWith(String s,int start)</h4><p>用于检测字符串是否以指定的前缀开始。（返回boolean类型）</p>
-<h4 id="6-endsWith-String-s"><a href="#6-endsWith-String-s" class="headerlink" title="6.endsWith(String s)"></a>6.endsWith(String s)</h4><p>测试此字符串是否以指定的后缀结尾。（返回boolean类型）</p>
-<h4 id="7-trim-Striang-s"><a href="#7-trim-Striang-s" class="headerlink" title="7.trim(Striang s)"></a>7.trim(Striang s)</h4><p>用于删除字符串的头尾空白符。（返回String类型）</p>
-<h4 id="8-replace-char-searchChar-char-newChar"><a href="#8-replace-char-searchChar-char-newChar" class="headerlink" title="8.replace(char searchChar,char newChar)"></a>8.replace(char searchChar,char newChar)</h4><p>通过用 newChar 字符替换字符串中出现的所有 searchChar 字符，并返回替换后的新字符串。</p>
-<h4 id="10-toCharArray-String-s"><a href="#10-toCharArray-String-s" class="headerlink" title="10.toCharArray(String s)"></a>10.toCharArray(String s)</h4><p>将字符串转换为字符数组。(返回Char数组)</p>
-<h4 id="11-split-String-regex-int-limit"><a href="#11-split-String-regex-int-limit" class="headerlink" title="11.split(String regex,int limit)"></a>11.split(String regex,int limit)</h4><p>regex – 正则表达式分隔符。limit – 分割的份数。根据匹配给定的正则表达式来拆分字符串（返回String数组）</p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="常用方法-3"><a href="#常用方法-3" class="headerlink" title="常用方法"></a>常用方法</h3><p>有些方法中前几个要必须会，否则题都做不了。以下是参考<a target="_blank" rel="noopener" href="http://t.csdn.cn/v6UpV">http://t.csdn.cn/v6UpV</a><br>1.charAt(int index)<br>返回指定索引处的值。(返回char类型)<br>2.indexOf(int ch)<br>从前向后查找指定字符第一次出现的字符串中的索引.（返回int类型）<br>3.substring(int beginIndex)<br>返回一个字符串，返回从起始位置（beginIndex）至字符串末尾的字符串。（返回String类型）<br>4.substring(int beginIndex，int endIndex)<br>返回从起始位置（beginIndex）到目标位置（endIndex）之间的字符串，但不包含目标位置（endIndex）的字符。（返回String类型）<br>5.startsWith(String s,int start)<br>用于检测字符串是否以指定的前缀开始。（返回boolean类型）<br>6.endsWith(String s)<br>测试此字符串是否以指定的后缀结尾。（返回boolean类型）<br>7.trim(Striang s)<br>用于删除字符串的头尾空白符。（返回String类型）<br>8.replace(char searchChar,char newChar)<br>通过用 newChar 字符替换字符串中出现的所有 searchChar 字符，并返回替换后的新字符串。<br>10.toCharArray(String s)<br>将字符串转换为字符数组。(返回Char数组)<br>11.split(String regex,int limit)<br>regex – 正则表达式分隔符。limit – 分割的份数。根据匹配给定的正则表达式来拆分字符串（返回String数组）</p>
+<hr>
+<p>个人还只是做了些十分简单的算法题，一些题发现使用集合的方式比通用方法运行时间要快，同时也是为了复习java的基础，更好的解法还要不断的积累。</p>
 
       
 
@@ -266,15 +258,6 @@
 
   
 <nav id="article-nav">
-  
-    <a href="/2023/05/06/java%E7%AE%97%E6%B3%95(method)/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JAVA算法小技巧
-        
-      </div>
-    </a>
   
   
     <a href="/2023/05/05/Build%20blog(pit)/" id="article-nav-older" class="article-nav-link-wrap">
