@@ -150,21 +150,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>java算法就得有别其他语言的方法，所以首先我会采用内配的的方法。</p>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>1.HashMap</p>
-<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>哈希算法实现的键值对存储结构，支持快速存储、查找和删除。个人认为这是最经常用的集合，主要是找对应的值这内配的方法可以减少运算的时间。不过也需要消耗更多的运行空间。</p>
-<h4 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h4><p>put(key, value)：将key-value对插入到哈希表中。<br>get(key)：返回与指定键关联的值，如果该键不存在，则返回null。<br>remove(key)：删除指定键对应的映射关系。<br>containsKey(key)：判断哈希表中是否包含指定的键。<br>containsValue(value)：判断哈希表中是否包含指定的值。<br>keySet()：返回哈希表中所有键的集合。<br>values()：返回哈希表中所有值的集合。<br>entrySet()：返回哈希表中所有键值对的集合。</p>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>1.两数之和<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum/">https://leetcode.cn/problems/two-sum/</a><br>2.罗马转整数<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/roman-to-integer/">https://leetcode.cn/problems/roman-to-integer/</a></p>
-<h3 id="2-ArrayList"><a href="#2-ArrayList" class="headerlink" title="2.ArrayList"></a>2.ArrayList</h3><h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><p>同LinkedList除了底层一个是链表一个是数组基本没什么不同。它们是有序有索引值，元素可重复。比较局限于排列有相同元素的集合。</p>
-<h4 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h4><p>add(element) - 将元素添加到链表尾部<br>addFirst(element) - 将元素添加到链表头部<br>addLast(element) - 将元素添加到链表尾部<br>remove() - 删除并返回链表头部的元素<br>removeFirst() - 删除并返回链表头部的元素<br>removeLast() - 删除并返回链表尾部的元素<br>get(index) - 返回指定索引处的元素<br>set(index, element) - 替换指定索引处的元素<br>size() - 返回链表中元素的数量<br>clear() - 删除链表中的所有元素</p>
-<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>1.移除元素<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-element/">https://leetcode.cn/problems/remove-element/</a></p>
-<h3 id="3-LinkedHashSet"><a href="#3-LinkedHashSet" class="headerlink" title="3.LinkedHashSet"></a>3.LinkedHashSet</h3><h4 id="介绍-2"><a href="#介绍-2" class="headerlink" title="介绍"></a>介绍</h4><p>和ArrayList的使用区别就是放入这个集合内的元素不能重复，如果想让String类型元素不重复得重写 hashCode()和 equals()。</p>
-<h4 id="常用方法-2"><a href="#常用方法-2" class="headerlink" title="常用方法"></a>常用方法</h4><p>add(E e)：向set中添加元素e，如果元素已存在，则不会添加。<br>clear()：清空set中的所有元素。<br>contains(Object o)：判断set是否包含指定对象o，如果包含则返回true，否则返回false。<br>iterator()：返回set中所有元素的迭代器。<br>remove(Object o)：从set中删除指定对象o，如果删除成功，则返回true，否则返回false。<br>size()：返回set中元素的数量。<br>toArray()：将set转换为数组。</p>
-<h4 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h4><p>1.删除有序数列的重复项<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">https://leetcode.cn/problems/remove-duplicates-from-sorted-array/</a></p>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="常用方法-3"><a href="#常用方法-3" class="headerlink" title="常用方法"></a>常用方法</h3><p>有些方法中前几个要必须会，否则题都做不了。以下是参考<a target="_blank" rel="noopener" href="http://t.csdn.cn/v6UpV">http://t.csdn.cn/v6UpV</a><br>1.charAt(int index)<br>返回指定索引处的值。(返回char类型)<br>2.indexOf(int ch)<br>从前向后查找指定字符第一次出现的字符串中的索引.（返回int类型）<br>3.substring(int beginIndex)<br>返回一个字符串，返回从起始位置（beginIndex）至字符串末尾的字符串。（返回String类型）<br>4.substring(int beginIndex，int endIndex)<br>返回从起始位置（beginIndex）到目标位置（endIndex）之间的字符串，但不包含目标位置（endIndex）的字符。（返回String类型）<br>5.startsWith(String s,int start)<br>用于检测字符串是否以指定的前缀开始。（返回boolean类型）<br>6.endsWith(String s)<br>测试此字符串是否以指定的后缀结尾。（返回boolean类型）<br>7.trim(Striang s)<br>用于删除字符串的头尾空白符。（返回String类型）<br>8.replace(char searchChar,char newChar)<br>通过用 newChar 字符替换字符串中出现的所有 searchChar 字符，并返回替换后的新字符串。<br>10.toCharArray(String s)<br>将字符串转换为字符数组。(返回Char数组)<br>11.split(String regex,int limit)<br>regex – 正则表达式分隔符。limit – 分割的份数。根据匹配给定的正则表达式来拆分字符串（返回String数组）</p>
-<hr>
-<p>个人还只是做了些十分简单的算法题，一些题发现使用集合的方式比通用方法运行时间要快，同时也是为了复习java的基础，更好的解法还要不断的积累。</p>
-
+        <p>这篇是个人做了一些java算法题的总结，个人认为做java算法尽量用java内配的方法解决。</p>
+        
+          <a class="article-more-a" href="/2023/05/06/JAVA%20algorithm(method)/#more">more >></a>
+        
       
 
       
@@ -172,7 +161,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -213,7 +224,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/05/Build%20blog(pit)/">搭建博客遇到的问题</a>
+      <a class="article-title" href="/2023/05/05/Build%20blog(pit)/">搭建博客</a>
     </h1>
   
 
@@ -226,17 +237,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h2><p>个人是根据up主CodeSheep的搭建博客视频操作<br>【手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo】<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?vd_source=50be6b22e81e8bfc8a768b205904310c">https://www.bilibili.com/video/BV1Yb411a7ty?vd_source&#x3D;50be6b22e81e8bfc8a768b205904310c</a></p>
-<h2 id="个人遇到的坑"><a href="#个人遇到的坑" class="headerlink" title="个人遇到的坑"></a>个人遇到的坑</h2><h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p>域名的创建<strong>必须</strong>按照格式来。（XXX.github.io）</p>
-<p><img src="https://raw.githubusercontent.com/Boring8/Boring8.github.io/master/img/boke(pit)/yuming.png" alt="个人域名"><br>本人就是因为把格式中的io改成web就出大问题</p>
-<h3 id="视频中修改-config-yml的问题"><a href="#视频中修改-config-yml的问题" class="headerlink" title="视频中修改_config.yml的问题"></a>视频中修改_config.yml的问题</h3><p>修改时需要添加type,repo,branch，可能会报修改失败。</p>
-<p><img src="https://github.com/Boring8/Boring8.github.io/blob/master/img/boke(pit)/xiugai.png" alt="修改部分">那就要把repo改成repository全名，这点好像都没有人提醒。</p>
-<p>详细的修改可以看这篇<a target="_blank" rel="noopener" href="http://t.csdn.cn/L4iTH">http://t.csdn.cn/L4iTH</a></p>
-<h3 id="个人博客无法访问"><a href="#个人博客无法访问" class="headerlink" title="个人博客无法访问"></a>个人博客无法访问</h3><p>Windows系统下，找到C:\Windows\System32\drivers\etc这个目录下的hosts文件,修改相关配置<br>详细的过程可以看这篇<a target="_blank" rel="noopener" href="http://t.csdn.cn/OZV6l">http://t.csdn.cn/OZV6l</a></p>
-<h3 id="图片无法加载"><a href="#图片无法加载" class="headerlink" title="图片无法加载"></a>图片无法加载</h3><p>可以参考<a target="_blank" rel="noopener" href="http://t.csdn.cn/nWdn5">http://t.csdn.cn/nWdn5</a></p>
-<hr>
-<p>搭建博客时，遇到了不少问题有些问题也卡了挺久，后面想想，其实如果试了几次还是不行，可以回到问题开始的时候再是一边原先的方法。说不定是因为哪里手残了。</p>
-
+        <p>本人搭建博客所有流程和遇到的问题，本来想用github搭建后台但是因为墙问题，改为用gitee为后台。</p>
+        
+          <a class="article-more-a" href="/2023/05/05/Build%20blog(pit)/#more">more >></a>
+        
       
 
       
@@ -245,6 +249,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -361,6 +376,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java算法</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
