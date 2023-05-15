@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023 | Boring</title>
+  <title>idea配置问题 | Boring</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Boring">
-<meta property="og:url" content="http://example.com/archives/2023/index.html">
+  <meta name="description" content="本片是本人在使用idea中遇到的问题，及相关的解决方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="idea配置问题">
+<meta property="og:url" content="http://example.com/2023/05/14/Dependencies(pit)/index.html">
 <meta property="og:site_name" content="Boring">
+<meta property="og:description" content="本片是本人在使用idea中遇到的问题，及相关的解决方法。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/image/Dependencies(pit)/1684062379184.png">
+<meta property="og:image" content="http://example.com/image/Dependencies(pit)/1684062666645.png">
+<meta property="og:image" content="http://example.com/image/Dependencies(pit)/1684062857333.png">
+<meta property="og:image" content="http://example.com/image/Dependencies(pit)/1684121958707.png">
+<meta property="og:image" content="http://example.com/image/Dependencies(pit)/1684122262382.png">
+<meta property="article:published_time" content="2023-05-14T10:58:00.000Z">
+<meta property="article:modified_time" content="2023-05-15T03:53:13.071Z">
 <meta property="article:author" content="Boring">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/image/Dependencies(pit)/1684062379184.png">
   
     <link rel="alternative" href="/atom.xml" title="Boring" type="application/atom+xml">
   
@@ -128,37 +138,66 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Dependencies(pit)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      idea配置问题
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/14/Dependencies(pit)/" class="archive-article-date">
+
+        
+        <a href="/2023/05/14/Dependencies(pit)/" class="archive-article-date">
   	<time datetime="2023-05-14T10:58:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/14/Dependencies(pit)/">idea配置问题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本片是本人在使用idea中遇到的问题，及相关的解决方法。</p>
+<span id="more"></span>
+<h3 id="导入依赖失败"><a href="#导入依赖失败" class="headerlink" title="导入依赖失败"></a>导入依赖失败</h3><p>在项目导入依赖的时候，有时会导入失败，出现：Cannot resolve org.xxx.xxx的报错。这篇是关于解决此问题的方法。导入依赖失败的主要原因是由于手动或者网络等导致下载不完全。本片借鉴于<a target="_blank" rel="noopener" href="http://t.csdn.cn/2q6bg">http://t.csdn.cn/2q6bg</a></p>
+<h4 id="1-找到存放jar包的地址"><a href="#1-找到存放jar包的地址" class="headerlink" title="1.找到存放jar包的地址"></a>1.找到存放jar包的地址</h4><p>打开当前maven仓库存放jar包的地址，正常是repository目录（如果有改动通过sttings查看）<br><img src="/image/Dependencies(pit)/1684062379184.png" alt="sttings"></p>
+<h4 id="2-找到对应的jar包下载位置"><a href="#2-找到对应的jar包下载位置" class="headerlink" title="2.找到对应的jar包下载位置"></a>2.找到对应的jar包下载位置</h4><p>进入repository，找到对应的jar包下载位置,根据提示的报错jar全名，就可以找到对应的地址。<br><img src="/image/Dependencies(pit)/1684062666645.png" alt="pack"></p>
+<h4 id="3-找到后缀是lastUp…的文件"><a href="#3-找到后缀是lastUp…的文件" class="headerlink" title="3.找到后缀是lastUp…的文件"></a>3.找到后缀是lastUp…的文件</h4><p>进入了对应的jar包位置，然会我们会看到有些包后缀是lastUp… 这就表明下载失败，需要报整个jar包目录删除才行。<br><img src="/image/Dependencies(pit)/1684062857333.png" alt="文件"></p>
+<h4 id="4-重新导入"><a href="#4-重新导入" class="headerlink" title="4.重新导入"></a>4.重新导入</h4><p>直接把该fastjson版本的整个目录删除。重新在maven工程里面导入即可。</p>
+<h3 id="创建maven过慢"><a href="#创建maven过慢" class="headerlink" title="创建maven过慢"></a>创建maven过慢</h3><p>本片借鉴于<a target="_blank" rel="noopener" href="https://www.shuzhiduo.com/A/8Bz8knWOdx/">https://www.shuzhiduo.com/A/8Bz8knWOdx/</a></p>
+<h4 id="1-找到配置项"><a href="#1-找到配置项" class="headerlink" title="1.找到配置项"></a>1.找到配置项</h4><p>创建新项目的最后一个页面，在此页面找到右边的加号。<br><img src="/image/Dependencies(pit)/1684121958707.png" alt="1684121958707"></p>
+<h4 id="2-添加配置"><a href="#2-添加配置" class="headerlink" title="2.添加配置"></a>2.添加配置</h4><p>在name中添加archetypeCatalog，value中添加internal<br><img src="/image/Dependencies(pit)/1684122262382.png" alt="1684122262382"><br>新建maven项目，就能发现项目很快就创建完成。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -171,202 +210,104 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/05/14/Dependencies(pit)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/09/JAVA%20algorithm.3(method)/" class="archive-article-date">
-  	<time datetime="2023-05-09T09:25:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/09/JAVA%20algorithm.3(method)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Math(summary)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/09/JAVA%20algorithm.3(method)/">Math(summary)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/08/JAVA%20algorithm.2(method)/" class="archive-article-date">
-  	<time datetime="2023-05-08T09:26:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/08/JAVA%20algorithm.2(method)/">String</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/06/JAVA%20algorithm(method)/" class="archive-article-date">
-  	<time datetime="2023-05-06T07:25:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/06/JAVA%20algorithm(method)/">集合（summary）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/05/Build%20blog(pit)/" class="archive-article-date">
-  	<time datetime="2023-05-05T07:53:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/05/Build%20blog(pit)/">搭建博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -389,8 +330,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
